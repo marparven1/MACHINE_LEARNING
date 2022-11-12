@@ -1,0 +1,3 @@
+git add "fileName"
+git commit -m "Commit summary, changes"
+git push 
