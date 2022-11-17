@@ -14879,8 +14879,8 @@ Dimensiones: (6,)
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>Modelo</strong></p>
-<p>Con el argumento <em>.fit</em> estamos calculando los la estimaación de los coeficientes de regresión $\beta_0$ y $\beta_1$, obteniendo así $\hat\beta_0$ y $\hat\beta_1$ .</p>
-<p>Es decir, la ecuación de regresión linear simple es la siguiente:</p>
+<p>Con el argumento <em>.fit</em> estamos calculando los la estimación de los coeficientes de regresión $\beta_0$ y $\beta_1$, obteniendo así $\hat\beta_0$ y $\hat\beta_1$ .</p>
+<p>Es decir, la ecuación de regresión linear simple que explica la variable Y a partir de la variable explicativa X es la siguiente:</p>
 <center>$Y = \beta_0 + \beta_1 x + \epsilon$</center>
 <p>Donde:</p>
 <ul>
@@ -14888,7 +14888,7 @@ Dimensiones: (6,)
 <li>$\beta_1$ mide el cambio en Y por cada modificación unitaria en x</li>
 <li>$\epsilon$ es el error de observación cometido debido a la aleatoriedad</li>
 </ul>
-<p>Y en el caso de la estimación:</p>
+<p>Y para el caso de la estimación:</p>
 <center>$\hat y = \hat\beta_0 + \hat\beta_1 x$</center>
 
 </div>
@@ -14919,6 +14919,18 @@ Dimensiones: (6,)
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4>Paso 4: Obtención de los resultados</h4><a class="anchor" id="RLS-4"></a>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Una vez creado el modelo y entrenado, vamos a ver los coeficientes de regresión y la bondad de ajuste del modelo.</p>
 
 </div>
 </div>
@@ -14968,7 +14980,7 @@ Dimensiones: (6,)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Este coeficiente es una medida de la bondad de ajuste del modelo, en otras palabras, se trata de una medida de la bondad de ajuste de la recta a los datos. Se tiene que $R^2  = 0.716$, es decir, el modelo (la recta) explica casi un $72\%$ de la varaibilidad total de la variable respuesta.</p>
+<p>Este coeficiente es una medida de la bondad de ajuste del modelo, en otras palabras, se trata de una medida de la bondad de ajuste de la recta a los datos. Se tiene que $R^2  = 0.716$, es decir, el modelo (la recta) explica casi un $72\%$ de la varaibilidad total de la variable respuesta Y.</p>
 
 </div>
 </div>
@@ -15033,11 +15045,11 @@ slope: [0.54]
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Y por tanto, la ecuación de la recta de regresión es la siguiente:</p>
-<center>$\hat y = 5,63+0,54x$</center>
+<center>$\hat y = 5.63+0.54x$</center>
 <p>Se tiene que:</p>
 <ul>
-<li>El valor de $\beta_0 = 5,63$ indica que la varaible respuesta es 5,63 cuando $x=0$</li>
-<li>$\beta_0 = 0,54$ significa que el valor de y aumenta 0,54 cuando x aumenta en una unidad.</li>
+<li>El valor de $\beta_0 = 5.63$ indica que la varaible respuesta y es 5.63 cuando $x=0$</li>
+<li>$\beta_0 = 0.54$ significa que el valor de y aumenta 0.54 cuando x aumenta en una unidad.</li>
 </ul>
 
 </div>
@@ -15545,6 +15557,7 @@ Variable respuesta:
 <li>$\epsilon$ es el error de observación cometido debido a la aleatoriedad</li>
 </ul>
 <p>El objetivo principal será estimar los valores de los coeficientes de regresión $\beta_0 , \beta_1 \text{ y } \beta_2$ por $\hat\beta_0 , \hat\beta_1 \text{ y } \hat\beta_2$ a partir de la muestra y de tal modo que se minimicen las distancias a los valores de la respuesta Y, es decir, minimizando la súma de los cuadrados de los resíduos.</p>
+<p><strong>Nota importante</strong>: En este caso, la ecuación de regresión ya no es una recta en el plano, sino que se trata de un hiperplano en un espacio multidimensional. En nuestro ejemplo, obtendremos la ecuación de un plano en un espacio tridimensional. En general, necesitamos un espacio n+1 dimensional para poder construir el diagrama que corresponde a n variables independientes.</p>
 
 </div>
 </div>
@@ -15643,7 +15656,7 @@ Coeficientes beta: [0.44706965 0.25502548]
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Con estos resultados, podemos afirmar que nuestro modelo explica el 86.16$\%$ de la variabilidad de la respuesta Y.</p>
-<p>La ecuación del modelo es la siguiente:</p>
+<p>La ecuación del modelo que describe el plano de regreónsi es la siguiente:</p>
 <center>$\hat{f(x_1,x_2)}=5.52+0.44 x_1 + 0.25 x_2$</center>
 
 </div>
@@ -15656,7 +15669,7 @@ Coeficientes beta: [0.44706965 0.25502548]
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Es decir, cuando ambos valores de $x_1$ y $x_2$ son nulos, el valor de la respuesta será 5.52. Además, si mantenemos constantes el resto de variables, podemos afirmar que un aumento en una unidad del valor de la variable $x_1$ supone un amento de la respuesta en 0.44 unidades. Ocurre lo mismo con la variable $x_2$. Un aumento de ésta en una unidad, y manteniendo el resto de variables constantes, supone un aumento de laa respuesta en un valor de 0.25.</p>
+<p>Es decir, cuando ambos valores de $x_1$ y $x_2$ son nulos, el valor de la respuesta será 5.52. Además, si mantenemos constante la variable $x_2$, podemos afirmar que un aumento en una unidad del valor de la variable $x_1$ supone un amento de la respuesta en 0.44 unidades. Ocurre lo mismo con la variable $x_2$. Un aumento de ésta en una unidad, y manteniendo constante la variable $x_1$, supone un aumento de la respuesta en un valor de 0.25.</p>
 
 </div>
 </div>
@@ -17155,7 +17168,7 @@ Predicción de la respuesta,y:
 </li>
 <li><p><strong>Variable objetivo o respuesta, Y</strong>: Nota numérica del alumno</p>
 </li>
-<li><p><strong>Modelo</strong>: $Y=\beta_0 + \beta_1 x_1 + \epsilon \longrightarrow Nota=\beta_0 + \beta_1 Horas_estudio  + \epsilon$</p>
+<li><p><strong>Modelo</strong>: $Y=\beta_0 + \beta_1 x_1 + \epsilon \longrightarrow \text{Nota}=\beta_0 + \beta_1 \text{Horas de estudio}  + \epsilon$</p>
 </li>
 </ul>
 <h3>Caso 2: Regresión lineal múltiple</h3><a class="anchor" id="EJ-2"></a>
@@ -17166,7 +17179,7 @@ Predicción de la respuesta,y:
 </li>
 <li><p><strong>Variable objetivo o respuesta, Y</strong>: Número de parásitos</p>
 </li>
-<li><p><strong>Modelo</strong>: $Y=\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon \longrightarrow Num insectos=\beta_0 + \beta_1 Temperatura + \beta_2 Humedad + \epsilon$</p>
+<li><p><strong>Modelo</strong>: $Y=\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon \longrightarrow \text{Num insectos}=\beta_0 + \beta_1 \text{Temperatura} + \beta_2 \text{Humedad} + \epsilon$</p>
 </li>
 </ul>
 <h3> Caso 3: Regresión lineal polinómica</h3><a class="anchor" id="EJ-3"></a>
@@ -17177,13 +17190,29 @@ Predicción de la respuesta,y:
 </li>
 <li><p><strong>Variable objetivo o respuesta, Y</strong>: Salario</p>
 </li>
-<li><p><strong>Modelo</strong>: $Y=\beta_0 + \beta_1 x + \beta_2 x^2 + \epsilon \longrightarrow Salario=\beta_0 + \beta_1 Edad + \beta_2 Edad^2  + \epsilon$</p>
+<li><p><strong>Modelo</strong>: $Y=\beta_0 + \beta_1 x + \beta_2 x^2 + \epsilon \longrightarrow \text{Salario}=\beta_0 + \beta_1 \text{Edad} + \beta_2 \text{Edad}^2  + \epsilon$</p>
 </li>
 </ul>
 
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div>
 </body>
 
